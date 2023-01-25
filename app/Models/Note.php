@@ -10,7 +10,14 @@ class Note extends Model
     use HasFactory;
 
     protected $fillable = [
-        'tile',
+        'parent_id',
+        'parent_type',
+        'title',
         'body'
     ];
+
+    public function parent()
+    {
+        return $this->morphTo();
+    }
 }

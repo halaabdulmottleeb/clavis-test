@@ -25,4 +25,9 @@ class EmployeeService {
     {
         return $this->employeeRepository->delete($id);
     }
+
+    public function findAll(){
+
+        return $this->employeeRepository->findAll([], ['note']);
+    }
 }

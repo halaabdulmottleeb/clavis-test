@@ -46,4 +46,13 @@ class AbstractRepository  {
             abort(500, $e->getExceptionMessage());
         }
     }
+
+    public function findAll($filters = [], $with = [])
+    {
+        $query = $this->model->query()
+        ->where($filters)
+        ->with($with);
+
+        return $query->get();
+    }
 }

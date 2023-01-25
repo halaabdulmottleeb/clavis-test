@@ -13,6 +13,7 @@ class NoteService {
         $this->noteRepository = $noteRepository;
     }
 
-
-
+    public function create($data){
+        $this->noteRepository->create($data);
+    }
 }

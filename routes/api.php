@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\CompanyController;
 use App\Http\Controllers\Api\EmployeeController;
+use App\Http\Controllers\Api\NoteController;
 use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -30,5 +31,11 @@ Route::middleware([
     Route::post('/employee', [EmployeeController::class, 'create']);
     Route::put('/employee/{id}', [EmployeeController::class, 'update']);
     Route::delete('/employee/{id}', [EmployeeController::class, 'delete']);
+    Route::get('/employees', [EmployeeController::class, 'findAll']);
 
+    Route::post('/employee/note', [NoteController::class, 'createEmployeeNote']);
+    Route::post('/user/note', [NoteController::class, 'createUserNote']);
+    Route::post('/company/note', [NoteController::class, 'createCompanyNote']);
+
+    
 });

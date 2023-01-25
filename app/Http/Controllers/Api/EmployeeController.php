@@ -39,6 +39,12 @@ class EmployeeController extends Controller {
         return response()->json(['message' => "Deleted", "data" => []], 200);
     }
 
+    public function findAll(){
+
+        $res = $this->employeeService->findAll();
+
+        return response()->json(['message' => "success", "data" => $res], 200);
+    }
 
 
 }

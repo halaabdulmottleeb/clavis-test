@@ -16,4 +16,9 @@ class Employee extends Model
         'phone',
         'company_id',
     ];
+
+    public function note()
+    {
+        return $this->morphOne(Note::class, 'parent');
+    }
 }

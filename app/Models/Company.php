@@ -14,4 +14,9 @@ class Company extends Model
         'email',
         'website'
     ];
+
+    public function note()
+    {
+        return $this->morphOne(Note::class, 'parent');
     }
+}
