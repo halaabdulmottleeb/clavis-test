@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CompanyController;
 use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/register', [UserController::class, 'register']);
+
+Route::post('/company', [CompanyController::class, 'create']);
+Route::update('/company/{id}', [CompanyController::class, 'updateCompany']);
+Route::delete('/company/{id}', [CompanyController::class, 'delete']);

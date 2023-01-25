@@ -27,4 +27,23 @@ class AbstractRepository  {
         }
     }
 
+    public function updateWhere($col, $value, $data =[])
+    {
+        try {
+            $this->model->where($col, $value)->update($data);
+        } catch(Expectation $e) {
+
+            abort(500, $e->getExceptionMessage());
+        }
+    }
+
+    public function delete($id)
+    {
+        try {
+            return $this->model->destroy($id);
+        } catch(Expectation $e) {
+
+            abort(500, $e->getExceptionMessage());
+        }
+    }
 }

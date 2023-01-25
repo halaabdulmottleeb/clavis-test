@@ -13,6 +13,16 @@ class CompanyService {
         $this->companyRepository = $companyRepository;
     }
 
+    public function createCompany($data){
+        return $this->companyRepository->create($data);
+    }
 
+    public function updateCompany($id, $data){
+        return $this->companyRepository->updateWhere('id', $id, $data);
+    }
 
+    public function deleteCompany($id)
+    {
+        return $this->companyRepository->delete($id);
+    }
 }
