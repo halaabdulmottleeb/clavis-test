@@ -35,6 +35,6 @@ class CompanyController extends Controller {
     public function delete($id){
         $this->companyService->deleteCompany($id);
 
-        return response()->json(['message' => "Deleted", "data" => $response], 200);
+        return response()->json(['message' => "Deleted", "data" => []], 200);
     }
 }
