@@ -20,5 +20,5 @@ Route::post('/login', [UserController::class, 'login']);
 Route::post('/register', [UserController::class, 'register']);
 
 Route::post('/company', [CompanyController::class, 'create']);
-Route::update('/company/{id}', [CompanyController::class, 'updateCompany']);
+Route::put('/company/{id}', [CompanyController::class, 'update']);
 Route::delete('/company/{id}', [CompanyController::class, 'delete']);

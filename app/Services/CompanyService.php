@@ -8,7 +8,7 @@ class CompanyService {
 
     public $companyRepository;
     
-    public function __construct(CompanyRepository $companyRepository)
+    public function __construct(CompanyRepository $companyRepository )
     {
         $this->companyRepository = $companyRepository;
     }

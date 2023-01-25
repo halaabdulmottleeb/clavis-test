@@ -26,7 +26,7 @@ class CreateCompanyReuqest extends FormRequest
         return [
             "name" => "required|string",
             "email" => "required|email",
-            "webiste" => "required|string"
+            "website" => "required|string"
         ];
     }
 }

@@ -25,7 +25,7 @@ class UpdateCompanyReuqest extends FormRequest
     {
         return [
             "name" => "sometimes|string",
-            "email" => "sometime|email",
+            "email" => "sometimes|email",
             "webiste" => "sometimes|string"
         ];
     }
